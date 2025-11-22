@@ -2,19 +2,16 @@ from math import *
 
 def operationsvalides(): 
       return ["multiplication","addition","soustraction","division"]
+while True:
+    message = input("Quel type d'opération veux-tu effectuer ? : ").strip().casefold()
+    if message in operationsvalides():
+          break
+    else:
+      print("Opération invalide, recommence.")
 
-message = input("Quel type d'opération veut tu effectuer ? :").strip().casefold()
+a = float(int(input("Entre le premier nombre :")))
+b = float(int(input("Entre le deuxième nombre :")))
 
-if message not in operationsvalides() :
-      print("Veuillez entrez une opération valide")
-      exit()
-
-try :
-    a = float(input("Entre le premier nombre :"))
-    b = float(input("Entre le deuxième nombre :"))
-except : 
-    print("Veuillez entrez un nombre entier ou à virgule")
-    exit()
 
 def multiplication(): 
       return a * b
